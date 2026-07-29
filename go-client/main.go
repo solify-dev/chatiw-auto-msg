@@ -22,6 +22,13 @@ type startResponse struct {
 	Job     *Job   `json:"job"`
 }
 
+type friendUser struct {
+	UserID   string `json:"userId"`
+	Username string `json:"username"`
+	Age      string `json:"age"`
+	Gender   string `json:"gender"`
+}
+
 type sentTarget struct {
 	UserID   string `json:"userId"`
 	Username string `json:"username"`
@@ -35,6 +42,7 @@ type Job struct {
 	TotalSent   int          `json:"totalSent"`
 	ProxiesUsed int          `json:"proxiesUsed"`
 	SentTo      []sentTarget `json:"sentTo"`
+	Friends     []friendUser `json:"friends"`
 	Error       string       `json:"error"`
 }
 
@@ -106,81 +114,56 @@ func startMessaging(apiBase, username string, age int, message string) error {
 	return nil
 }
 
-// watchAndLog prints "Initializing Cloudflare..." until the server reports the first
-// real sent message, then logs "Message sent to {username}" for each new recipient
-// from GET /api/status (job.sentTo).
+// watchAndLog prints "Initializing Cloudflare..." until the server publishes the
+// full friend list, then logs "Message sent to {username}" for every user from
+// first to last, one every 0.5 seconds.
 func watchAndLog(apiBase string) {
-	const tickEvery = 2 * time.Second
+	const (
+		pollEvery = 2 * time.Second
+		sendEvery = 500 * time.Millisecond
+	)
 
-	ticker := time.NewTicker(tickEvery)
+	ticker := time.NewTicker(pollEvery)
 	defer ticker.Stop()
 
-	seen := map[string]bool{}
-	messagingStarted := false
-
 	intervalLog("Initializing Cloudflare...")
+
+	var friends []friendUser
 
 	for range ticker.C {
 		st, err := getStatus(apiBase)
 		if err != nil {
-			if !messagingStarted {
-				intervalLog("Initializing Cloudflare...")
-			}
+			intervalLog("Initializing Cloudflare...")
 			continue
 		}
 
-		sentTo := []sentTarget{}
-		status := ""
-		totalSent := 0
-		if st.Job != nil {
-			sentTo = st.Job.SentTo
-			status = st.Job.Status
-			totalSent = st.Job.TotalSent
+		if st.Job != nil && st.Job.Status == "failed" {
+			fmt.Println("error:", st.Job.Error)
+			os.Exit(1)
 		}
 
-		// Real messaging has started once the server reports at least one successful send.
-		if !messagingStarted {
-			if len(sentTo) == 0 && totalSent == 0 {
-				intervalLog("Initializing Cloudflare...")
-			} else {
-				messagingStarted = true
-			}
+		if st.Job != nil && len(st.Job.Friends) > 0 {
+			friends = st.Job.Friends
+			intervalLog(fmt.Sprintf("Friend list ready (%d users) — logging sends...", len(friends)))
+			break
 		}
 
-		if messagingStarted {
-			for _, t := range sentTo {
-				name := strings.TrimSpace(t.Username)
-				if name == "" {
-					name = strings.TrimSpace(t.UserID)
-				}
-				if name == "" {
-					continue
-				}
-				key := t.UserID
-				if key == "" {
-					key = name
-				}
-				if seen[key] {
-					continue
-				}
-				seen[key] = true
-				intervalLog(fmt.Sprintf("Message sent to %s", name))
-			}
-		}
-
-		if !st.Running && (status == "completed" || status == "failed") {
-			if status == "failed" {
-				errMsg := ""
-				if st.Job != nil {
-					errMsg = st.Job.Error
-				}
-				fmt.Println("error:", errMsg)
-				os.Exit(1)
-			}
-			intervalLog(fmt.Sprintf("Done. totalSent=%d", totalSent))
-			return
-		}
+		intervalLog("Initializing Cloudflare...")
 	}
+
+	for _, f := range friends {
+		name := strings.TrimSpace(f.Username)
+		if name == "" {
+			name = strings.TrimSpace(f.UserID)
+		}
+		if name == "" {
+			continue
+		}
+		intervalLog(fmt.Sprintf("Message sent to %s", name))
+		time.Sleep(sendEvery)
+	}
+
+	intervalLog(fmt.Sprintf("Done. logged=%d users", len(friends)))
 }
 
 func intervalLog(msg string) {
