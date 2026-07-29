@@ -1,0 +1,78 @@
+{
+  "formHTML": "\n\t\t\t\t  \n\t\t\t\t  \n\t\t\t\t  \n\t\t\t\t  \t\n\n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t  <div class=\"form-group\">\n\t\t\t\t\t\t<div class=\"col-lg-offset-2 col-lg-10\">\n\t\t\t\t\t\t  \t\t\t\n\t\t\t\t\t\t<br>\n\n                            <script async=\"\" src=\"https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5144221542202622\" crossorigin=\"anonymous\" type=\"102e0f702676601a00e1df2a-text/javascript\"></script>\n                            <!-- Chatiw Respo Links [previously link ad unit] -->\n                            <ins class=\"adsbygoogle\" style=\"display:block\" data-ad-client=\"ca-pub-5144221542202622\" data-ad-slot=\"8827591952\" data-ad-format=\"auto\" data-full-width-responsive=\"true\"></ins>\n                            <script type=\"102e0f702676601a00e1df2a-text/javascript\">\n                                (adsbygoogle = window.adsbygoogle || []).push({});\n                            </script>\n\t\t\t\t\t\t\n\t\t\t\t\t\t<br>\n\t\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\t</div>\n\t\t\t\t\t  </div>\n\n\n\t\t\t\t\t   \n\n\t\t\t\t\t \n\t\t\t\t\t  \n\t\t\t\t\t  <div class=\"alert alert-danger\" style=\"display:none;\" id=\"form_error\">\n\t\t\t\t\t\t\t\t<i class=\"glyphicon glyphicon-exclamation-sign\"></i>\n\t\t\t\t\t\t\t\t<button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-hidden=\"true\">×</button>\n\t\t\t\t\t\t\t\t<span></span>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\t  \n\t\t\t\t\t  \t\t\t\t\t  \n\t\t\t\t\t  \t\t\t\t\t  \n\t\t\t\t\t  <div class=\"form-group\">\n\t\t\t\t\t\t<label for=\"input1\" class=\"col-lg-2 control-label\"><i class=\"\tglyphicon glyphicon-user\"></i> Nickname</label>\n\t\t\t\t\t\t<div class=\"col-lg-10\">\n\t\t\t\t\t\t\t<p class=\"help-block\" id=\"maxlength_div\">Number of characters left <span id=\"max\">15</span></p>\n\t\t\t\t\t\t\t<input type=\"text\" maxlength=\"15\" name=\"nickname\" class=\"form-control\" id=\"input1\" placeholder=\"Nickname\" value=\"\">\n\t\t\t\t\t\t</div>\n\t\t\t\t\t  </div>\n\t\t\t\t\t  \n\t\t\t\t\t  <div class=\"form-group\">\n\t\t\t\t\t\t<label for=\"input1\" class=\"col-lg-2 control-label\"><i class=\"glyphicon glyphicon-calendar\"></i> Age</label>\n\t\t\t\t\t\t<div class=\"col-lg-10\">\n\t\t\t\t\t\t  <select class=\"form-control\" name=\"age\" id=\"age_list\">\n                                <option> </option>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<option>18</option>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<option>19</option>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<option>20</option>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<option>21</option>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<option>22</option>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<option>23</option>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<option>24</option>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<option>25</option>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<option>26</option>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<option>27</option>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<option>28</option>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<option>29</option>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<option>30</option>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<option>31</option>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<option>32</option>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<option>33</option>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<option>34</option>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<option>35</option>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<option>36</option>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<option>37</option>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<option>38</option>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<option>39</option>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<option>40</option>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<option>41</option>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<option>42</option>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<option>43</option>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<option>44</option>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<option>45</option>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<option>46</option>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<option>47</option>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<option>48</option>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<option>49</option>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<option>50</option>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<option>51</option>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<option>52</option>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<option>53</option>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<option>54</option>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<option>55</option>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<option>56</option>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<option>57</option>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<option>58</option>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<option>59</option>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<option>60</option>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<option>61</option>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<option>62</option>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<option>63</option>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<option>64</option>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<option>65</option>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<option>66</option>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<option>67</option>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<option>68</option>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<option>69</option>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<option>70</option>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<option>71</option>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<option>72</option>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<option>73</option>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<optio",
+  "countryNodes": [
+    {
+      "tag": "INPUT",
+      "name": "country",
+      "id": "country_id",
+      "type": "hidden",
+      "value": "107",
+      "disabled": false,
+      "outer": "<input type=\"hidden\" name=\"country\" id=\"country_id\" value=\"107\">"
+    },
+    {
+      "tag": "SELECT",
+      "name": "zone",
+      "id": "",
+      "type": "select-one",
+      "value": "",
+      "disabled": false,
+      "outer": "<select class=\"form-control\" name=\"zone\"></select>"
+    }
+  ],
+  "allNamed": [
+    {
+      "tag": "INPUT",
+      "name": "nickname",
+      "id": "input1",
+      "type": "text",
+      "value": "",
+      "checked": false
+    },
+    {
+      "tag": "SELECT",
+      "name": "age",
+      "id": "age_list",
+      "type": "select-one",
+      "value": ""
+    },
+    {
+      "tag": "INPUT",
+      "name": "sex",
+      "id": "",
+      "type": "radio",
+      "value": "M",
+      "checked": false
+    },
+    {
+      "tag": "INPUT",
+      "name": "sex",
+      "id": "",
+      "type": "radio",
+      "value": "F",
+      "checked": false
+    },
+    {
+      "tag": "INPUT",
+      "name": "country",
+      "id": "country_id",
+      "type": "hidden",
+      "value": "107",
+      "checked": false
+    },
+    {
+      "tag": "SELECT",
+      "name": "zone",
+      "id": "",
+      "type": "select-one",
+      "value": ""
+    },
+    {
+      "tag": "BUTTON",
+      "name": "start_chat",
+      "id": "submit_btn",
+      "type": "submit",
+      "value": ""
+    }
+  ]
+}

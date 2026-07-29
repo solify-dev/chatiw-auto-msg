@@ -1,0 +1,22 @@
+{
+  "name": "chat-automation",
+  "version": "1.0.0",
+  "description": "Chatiw.com browser automation with Cloudflare Turnstile solving",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "api": "node server.js",
+    "probe": "node probe-proxy.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "playwright": "^1.62.0",
+    "proxy-chain": "^3.0.0",
+    "puppeteer-core": "^25.4.0",
+    "puppeteer-real-browser": "^1.4.4"
+  }
+}
